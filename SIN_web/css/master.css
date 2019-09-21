@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body, html {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #4A4A4A !important;
+  background-color: #F9F9F9 !important;
+  margin: 0;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: 400;
+}
+body a, html a {
+  margin: 0;
+  text-decoration: none;
+}
+article, footer, header, main, nav, section {
+  display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin: 0;
+  padding-bottom: 1em;
+}
+h1.title{
+  font-weight: 700;
+  font-size: 1em;
+  margin-bottom: .2em;
+}
+h2.nav, h1.nav{
+  text-align: left;
+  padding-top: .5em;
+  margin-bottom: .2em;
+  font-size: 2em;
+  font-weight: 600;
+}
+h2.title{
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: .4rem;
+  text-align: center;
+}
+h2.margin-down{
+  margin-bottom: .9em;
+}
+h3.title{
+  font-size: 1.6em;
+  font-weight: 700;
+}
+h4.title{
+  font-size: 1.47em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+p.article{
+  font-size: 1.5em;
+}
+.light{
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+section h1{
+  text-align: center;
+}
+.padding-top{
+  padding-top: 3.8em;
+}
+
+
+/* <--- HOME ---> */
+section.gallery-in, div.home{
+  background-color: #EEEEEE;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 3em;
+}
+section.team, section.contact-us, section.about{
+  background: #FFF;
+  padding: 2em 3em 0 3em;
+  height: auto;
+}
+.home {
+  min-height: 100vh; /* Bude problem v safari, kde to musim odjebat od nav baru */
+  background-image: url('../img/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15em;
+  position: relative;
+}
+.fill{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+a.arrow-down{
+  position: relative;
+  top: calc(100vh - 6em); /* Bude problem v Safari a Chrome, kde to musim odjebat od nav baru */
+  left: calc(50% - 1em);
+}
+img.opacity-animation{
+ width: 2em;
+ animation: arrow 3s infinite;
+ -webkit-animation: arrow 3s infinite;
+}
+section.about article.about-us-1 , article.about-us-2{
+  padding-top: 1em;
+}
+div.gallery{
+  display: block;
+  margin-top: 1.5em;
+}
+div.gallery img{
+  width: 100%;
+}
+.people{
+  display: grid;
+  grid-template-columns: repeat(2, 10em);
+  grid-template-rows: repeat(2,auto);
+  grid-gap: 1em;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 2em;
+}
+section.member{
+  margin: 0;
+}
+section.member-last{
+  width: 10em;
+  margin: 2em auto 0 auto;
+  display: block;
+  text-align: center;
+}
+img.member-photo{
+  padding: .5em;
+  width: 100%;
+}
+form.contact-form{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  grid-row-gap: .5em;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 1em auto;
+}
+input{
+  width: 75%;
+}
+textarea{
+  resize: none !important;
+  overflow: hidden !important;
+}
+input, textarea{
+  background-color: #F9F9F9;
+  color: #4A4A4A !important;
+  border: none;
+  padding: .2em .3em;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button{
+  display: block !important;
+  margin: .5em auto 0 auto !important;
+  width: 10em;
+  color: #828282;
+  background-color: #EEEEEE;
+  border: none;
+  justify-content: center;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-weight: 300;
+  color: #9D9D9D;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-weight: 300;
+  color: #9D9D9D;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-weight: 300;
+  color: #9D9D9D;
+}
+
+/* <--- NEWS ---> */
+.feed-main-grid{
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  grid-row-gap: 2em;
+  align-items: center;
+}
+.feed-item-grid{
+  display: grid;
+  grid-template-rows: repeat(2,auto);
+  grid-row-gap: 1em;
+  align-items: center;
+}
+.feed-text-grid{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  padding: 0 1em;
+  text-align: left;
+}
+.wrapp{
+  display: block;
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+}
+.feed-img{
+  width: 100%;
+}
+a.feed-archon{
+  text-decoration: none;
+  color: #4A4A4A !important;
+}
+p.feed-foot{
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+.pages-main{
+  display: block;
+  width: 100%;
+}
+.pages-grid{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-column-gap: 1.5em;
+  justify-content: center;
+}
+span.pages-item{
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+  border-radius: 50%;
+}
+span.content-center{
+  text-align: center;
+  color: #4A4A4A;
+}
+span.now{
+  background-color: #4A4A4A;
+  color: #F9F9F9;
+}
+
+/* <--- MEMBERSHIP ---> */
+.membership-top-grid{
+  display: grid;
+  grid-template-rows: repeat(5,auto);
+  grid-row-gap: 1.5em;
+  margin-bottom: 1.8em;
+}
+img.justify-center{
+  place-self: center;
+}
+.membership-bottom-grid{
+  padding: 2em;
+  background-color: #EEEEEE;
+}
+.membership-bottom-core-grid{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  grid-row-gap: 2em;
+  text-align: center;
+  justify-items: center;
+}
+.membership-bottom-item-grid{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  width: 100%;
+}
+@media (orientation: landscape) {
+  form.contact-form{
+    width: 66%;
+  }
+  .membership-bottom-item-grid{
+    width: 70%
+  }
+  .membership-bottom-core-grid{
+    grid-row-gap: 4em;
+  }
+  ul.membership-advantages{
+    padding-left: 8em;
+  }
+}
+h3.upperline::before{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      content: "";
+      border-top: 1px solid #4A4A4A;
+      border-radius: 25%;
+      opacity: .3;
+      width: 66%;
+      transform: translateY(-0.5em);
+}
+ul.membership-advantages{
+  text-align: left;
+  list-style-position: outside;
+}
+ul.membership-advantages li{
+  font-size: 1.33em;
+  font-weight: normal;
+}
+
+/* <--- SECTIONS ---> */
+section.hr-main-grid{
+  display: grid;
+}
+.hr-item-grid{
+  display: grid;
+}
+.hr-item-grid picture.hr-item-large-icon{
+  display: none;
+}
+.hr-item-about h3.icon::before{
+    content: "";
+    display: inline-block;
+    float: center;
+    width: 1.5em;
+    height: 1.5em;
+    transform: translateY(0.35em) translateX(-0.5em);
+}
+.hr-item-about h3.admin::before{
+  background: url("../img/admin_icon.svg") no-repeat;
+  background-size: 1.5em 1.5em;
+}
+.hr-item-about h3.suitcase::before{
+  background: url("../img/suitcase_icon.svg") no-repeat;
+  background-size: 1.5em 1.5em;
+}
+.hr-item-about h3.fitness::before{
+  background: url("../img/fitness_icon.svg") no-repeat;
+  background-size: 1.5em 1.5em;
+}
+.hr-item-about h3.magazine::before{
+  background: url("../img/magazine_icon.svg") no-repeat;
+  background-size: 1.5em 1.5em;
+}
+/* <--- FOOTER ---> */
+footer{
+  width: 100%;
+  background-color: #4A4A4A;
+  padding: 2em 3em;
+  color: #FCFCFC !important;
+  display: grid;
+  grid-template-rows: repeat(2,auto);
+}
+footer p.article{
+  font-size: 1.13em;
+  margin: 0;
+  padding: 0;
+}
+footer h3.title{
+  font-size: 1.7em;
+}
+.footer-top{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+footer .footer-buttons-left-row-grid{
+  display: grid;
+  grid-template-rows: repeat(5,auto);
+  grid-row-gap: .3em;
+  justify-content: left;
+}
+footer .footer-button{
+  background-color: #5D5D5D;
+  color: #FCFCFC;
+  font-size: 1.15em;
+  text-align: center;
+  width: 11.5em;
+  height: 1.5em;
+}
+footer div.footer-top div.footer-buttons-left-row-grid a{
+  text-decoration: none !important;
+}
+footer .footer-logo-right-col-grid{
+  display: grid;
+  grid-template-rows: repeat(2,auto);
+  grid-row-gap: 1.5em;
+  justify-content: center;
+}
+footer .footer-img-logo{
+  width: 5.5em;
+  cursor: pointer;
+}
+section.footer-bottom{
+  display: grid;
+  grid-template-rows: repeat(2,auto);
+}
+footer .footer-contacts-row-grid{
+  display: grid;
+  grid-template-rows: repeat(5,auto);
+  margin-top: 1.5em;
+}
+footer .footer-heading-col-grid{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+footer .footer-heading-left{
+
+}
+footer .footer-heading-social-col-grid{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  justify-content: right;
+  grid-column-gap: 1em;
+  padding-right: .5em;
+}
+footer .footer-img-social{
+  width: 1.7em;
+  cursor: pointer;
+}
+footer .footer-contacts-col-grid{
+  display: grid;
+  grid-template-columns: repeat(2,11em);
+}
+
+footer .footer-visit-row-grid{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  margin-top: 1.5em;
+}
+footer .footer-visit-col-grid{
+  display: grid;
+  grid-template-columns: repeat(2,11em);
+}
+img.opacity-decrease{
+  opacity: 0.8;
+}
+
+/* <--- NAVIGATION ---> */
+nav {
+  position: fixed;
+  background: #EEEEEE;
+  width: calc(100%);
+  height: calc(100vh);
+  z-index: +101;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+nav ul {
+  list-style-type: none;
+  margin: 1em auto 0 auto;
+  display: block;
+  width: 80%;
+  padding: 0;
+}
+.container-nav-top{
+  display: grid;
+  grid-template-rows: repeat(4, 3.5em);
+  justify-content: space-evenly;
+  text-align: center;
+}
+.container-nav-bottom{
+  display: grid;
+  grid-template-rows: repeat(2, 3.5em);
+  justify-content: space-evenly;
+  text-align: center;
+}
+nav.overlay ul li a {
+  position: relative;
+  color:#8E8E8E;
+  font-weight: bold;
+  font-size: 2.3em;
+}
+nav.overlay ul li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.overlay ul li a:hover::after{
+  width: 100%;
+}
+nav ul li a:after {
+  transition: all .5s;
+}
+nav ul li a:hover{
+  color:#575757;
+  text-decoration: none;
+}
+nav ul li a.actual{
+  color: #4A4A4A;
+}
+nav ul li {
+  opacity: 0;
+  animation: show-x .7s 1s forwards;
+  -webkit-animation: show-x .7s 1s forwards;
+}
+#overlay h1.nav{
+  opacity: 0;
+}
+img.close-btn {
+  opacity: 0;
+  padding-top: 1.5em;
+  position: relative;
+  width: 2em;
+  cursor: pointer;
+}
+img.menu-btn {
+  position: relative;
+  padding-top: 1.5em;
+  width: 2.5em;
+  cursor: pointer;
+}
+header{
+  position: fixed;
+  width: 100%;
+  z-index: +100;
+}
+header div.navbar-strip div.navbar-container div.navbar-grid-col a{
+  color: #4A4A4A;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+header div.navbar-strip div.navbar-container div.navbar-grid-col a:hover{
+  color: #4A4A4A;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+div.navbar-strip{
+  margin-top: 1em;
+}
+div.navbar-container{
+  padding: 0 3em;
+}
+div.navbar-grid{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+div.-right{
+  text-align: right;
+}
+.inactive{
+  animation: r-slide-menu .3s ease-out forwards;
+  -webkit-animation: r-slide-menu .3s ease-out forwards;
+}
+.active{
+  display: block;
+  animation: slide-menu .3s ease-in forwards;
+  -webkit-animation: slide-menu .3s ease-in forwards;
+}
+.active .close-btn, .active h1.nav{
+  animation: show-x .3s .5s forwards;
+  -webkit-animation: show-x .3s .5s forwards;
+}
+.active div.container-nav-top li:nth-of-type(1){
+  animation: menu-item .25s forwards .35s ease-in-out;
+  -webkit-animation: menu-item .25s forwards .35s ease-in-out;
+}
+.active div.container-nav-top li:nth-of-type(2){
+  animation: menu-item .25s forwards .40s ease-in-out;
+  -webkit-animation: menu-item .25s forwards .40s ease-in-out;
+}
+.active div.container-nav-top li:nth-of-type(3){
+  animation: menu-item .25s forwards .45s ease-in-out;
+  -webkit-animation: menu-item .25s forwards .45s ease-in-out;
+}
+.active  div.container-nav-top li:nth-of-type(4){
+  animation: menu-item .25s forwards .50s ease-in-out;
+  -webkit-animation: menu-item .25s forwards .50s ease-in-out;
+}
+.active div.container-nav-bottom li:nth-of-type(1){
+  animation: menu-item .25s forwards .55s ease-in-out;
+  -webkit-animation: menu-item .25s forwards .55s ease-in-out;
+}
+.active div.container-nav-bottom li:nth-of-type(2){
+  animation: menu-item .25s forwards .60s ease-in-out;
+  -webkit-animation: menu-item .25s forwards .60s ease-in-out;
+}
+
+/* <--- ANIMATIONS ---> */
+@keyframes slide-menu {
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes slide-menu {
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+@keyframes r-slide-menu {
+  from{
+    transform: scaleX(1);
+  }
+  to{
+    transform: scaleX(0);
+  }
+}
+@-webkit-keyframes r-slide-menu {
+  from{
+    transform: scaleX(1);
+  }
+  to{
+    transform: scaleX(0);
+  }
+}
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes menu-item {
+  from{
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes menu-item {
+  from{
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes arrow {
+0% {opacity: .2}
+50% {opacity: .8}
+100% {opacity: .2}
+}
+
+@-webkit-keyframes arrow { /*Safari and Chrome*/
+0% {opacity: .2}
+50% {opacity: .8}
+100% {opacity: .2}
+}
